@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+          name="description"
+          content="Projeto usando JavaScript, HTML, CSS e a API do Pokémon
+          para desenvolver um site capaz de exibir um pokémon pelo seu nome ou número.">
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Pokédex</title>
+    <link rel="shortcut icon" href="./assets/images/huevo.png" type="image/png">
+
+</head>
+
+<body>
+    <div class="container">
+      <div class="row">
+        <div class="first-column column">
+          <div class="name-container">
+            <h2 id="pkm-number" class="nameContainer__infoPokemon"></h2>
+            <h1 id="pkm-name" class="nameContainer__infoPokemon"></h1>
+          </div>
+          <div class="size-container">
+            <span class="sizeContainer__infoPokemon">Height:
+              <span id="pkm-height"></span>
+            </span>
+            <span class="sizeContainer__infoPokemon">Weight:
+              <span id="pkm-weight"></span> 
+            </span>
+          </div>
+          <div class="region-container">
+            <span>Región:
+              <span id="pkm-region"></span>
+            </span>
+          </div>
+        </div>
+        <div class="second-column column">
+          <div class="pkm-img-container">
+            <img src="" id="pkm-image" alt="" crossorigin="anonymous">
+          </div>
+        </div>
+        <div class="third-column column">
+          <div class="container-details">
+            <div id="container-types"></div>
+            <h2>Base stats:</h2>
+            <div class="container-stats">
+               <ul>
+                  <li class="item-stats">
+                    <span class="item-stats-pill">HP:
+                      <span id="hp-stat"></span>
+                    </span>
+                  </li>
+                  <li class="item-stats">
+                    <span class="item-stats-pill">Attack:
+                      <span id="attack-stat"></span>
+                    </span>
+                  </li>
+                  <li class="item-stats">
+                    <span class="item-stats-pill">Defense:
+                      <span id="defense-stat"></span>
+                    </span>
+                  </li>
+                  <li class="item-stats">
+                    <span class="item-stats-pill">Sp. Attack:
+                      <span id="sp-attack-stat"></span>
+                    </span>
+                  </li>
+                  <li class="item-stats">
+                    <span class="item-stats-pill">Sp. Defense:
+                      <span id="sp-defense-stat"></span>
+                    </span>
+                  </li>
+                  <li class="item-stats">
+                    <span class="item-stats-pill">Speed:
+                      <span id="speed-stat"></span>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="footer">
+        <div class="container-button">
+          <button class="btn-navigation" id="btn-prev" title="Previous">
+            <img src="./assets/images/arrow.svg" alt="" class="arrow prev">
+          </button>
+          <button class="btn-navigation" id="btn-next" title="Next">
+            <img src="./assets/images/arrow.svg" alt="" class="arrow next">
+          </button>
+        </div>
+        <div class="container-search">
+          <form id="form-search">
+            <div class="search-fields">
+              <input type="search" placeholder="Search name or number" class="input-search form__field" id="input-search-pokemon">
+              <button class="btn-search form__field" id="search-pokemon">Go!</button>
+            </div>
+          </form>    
+        </div>
+      </div>
+    </div>
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/colorthief@2.3.2/dist/color-thief.umd.js"></script>
+    <script src="./js/pokemon-model.js"></script>
+    <script src="./js/poke-api.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://kit.fontawesome.com/455903a8c6.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
